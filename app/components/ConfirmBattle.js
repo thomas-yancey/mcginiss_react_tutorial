@@ -12,7 +12,7 @@ function puke (object){
 
 function ConfirmBattle(props){
   return props.isLoading === true
-    ? <p>Is Loading</p>
+    ? <h1>Loading</h1>
     : <div className="jumbotron col-sm-12 text-center" style={styles.transparentBg}>
         <h1>Confirm Players</h1>
         {props.playersInfo.map(function(playerInfo,idx){
@@ -37,9 +37,6 @@ function ConfirmBattle(props){
           </div>
         </div>
       </div>
-
-
-
 }
 
 ConfirmBattle.propTypes = {

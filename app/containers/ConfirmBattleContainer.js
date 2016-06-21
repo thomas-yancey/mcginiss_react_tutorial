@@ -3,7 +3,7 @@ var ConfirmBattle = require('../components/confirmBattle')
 var githubHelpers = require('../utils/githubHelpers')
 
 var ConfirmBattleContainer = React.createClass({
-  contextType: {
+  contextTypes: {
     router: React.PropTypes.object.isRequired
   },
 

@@ -5,6 +5,7 @@ var UserDetailsWrapper = require('./UserDetailsWrapper')
 var styles = require('../styles')
 var Router = require('react-router')
 var Link = Router.Link
+var Loading = require('./Loading')
 
 function puke(obj){
   return<pre>{JSON.stringify(obj,2,' ')}</pre>
@@ -12,7 +13,7 @@ function puke(obj){
 
 function Results(props) {
   return props.isLoading === true ?
-    <h1>Loading</h1> :
+    <Loading/> :
     <div className="jumbotron col-sm-12 text-center" style={styles.transparentBg}>
         <h1>{props.winner}</h1>
     {props.playersInfo.map(function(playerInfo, idx){
